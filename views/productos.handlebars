@@ -1,0 +1,13 @@
+<div>
+    {{#each prod}}
+   <h1 id="titulo">{{this.titulo}}</h1>
+   <h2 id="descripcion">{{this.descripcion}}</h2>
+   <h2 id="precio">{{this.precio}}</h2>
+   <img id="img">{{this.img}}
+   <h3 id="stock">{{this.stock}}</h3>
+   {{/each}}
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/public/js/productos.js"></script>
+<script src="/public/css/estilos.css"></script>
+<script src="/database/products.json"></script>
