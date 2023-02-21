@@ -1,6 +1,15 @@
 <div>
     <h1 class="tituloPrincipal">Lista de componentes:</h1>
+    <div>
+        {{#each productos}}
+        <h1 id="titulo">{{this.titulo}}</h1>
+        <h2 id="descripcion">{{this.descripcion}}</h2>
+        <h2 id="precio">{{this.precio}}</h2>
+        <img id="img">{{this.img}}
+        <h3 id="stock">{{this.stock}}</h3>
+        {{/each}}
+    </div>
 </div>
-<script src="/socket.io/socket.io.js"></script>
-<script src="/public/js/index.js"></script>
-<script src="/public/css/estilos.css"></script>
+<script type="text/javascript" src="/socket.io/socket.io.js" ></script>
+<script type="text/javascript" src="/public/js/index.js"></script>
+<script type="text/css" src="/public/css/estilos.css"></script> 

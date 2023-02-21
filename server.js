@@ -28,20 +28,12 @@ const serverHttp = app.listen(8080, () => {
 });
 serverHttp.on('error', error => console.log(`Error en el servidor: ${error}`));
 
-const httpServer = app.listen(9090, () => {
-    
-});
-
-const socketServer = new Server(httpServer);
+const socketServer = new Server(serverHttp);
 socketServer.on("connection", socket =>{
     console.log("Usuario conectado!");
     socket.on("msg", data => {
         console.log(data);
     });
 });
-
-const io = new Server(httpServer);
-let messages = [];
-
 
 export default app;
